@@ -22,6 +22,12 @@ public class Ejercicio1
       String cadena2=JOptionPane.showInputDialog("Ingrese el Segundo Numero");
       n2=Integer.parseInt(cadena2);
       
+      //Proceso - (Formulas o Calculas)
+      suma=n1+n2;
       
+      //Salida
+      String salida="La Suma es: "+suma;
+      JOptionPane.showMessageDialog(null,salida);
+      JOptionPane.showMessageDialog(null,salida,"Titulo Arriba",2);
     }
 }
