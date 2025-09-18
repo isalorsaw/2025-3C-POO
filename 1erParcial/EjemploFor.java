@@ -15,7 +15,7 @@ public class EjemploFor
         {
             String cadena=JOptionPane.showInputDialog("Ingrese un Numero");
             num=Integer.parseInt(cadena);
-            suma=suma+num;
+            suma=suma+num;        
         }
         JOptionPane.showMessageDialog(null,"La Suma de todos los numeros fue: "+suma);
     }
