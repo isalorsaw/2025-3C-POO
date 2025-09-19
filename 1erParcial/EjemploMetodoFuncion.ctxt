@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=EjemploMetodoFuncion
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=msg
+comment2.target=java.lang.String\ pedirCadena(java.lang.String)
+comment3.params=cadena
+comment3.target=void\ mostrarMensaje(java.lang.String)
+comment4.params=cadena
+comment4.target=int\ tamanio(java.lang.String)
+comment5.params=cadena
+comment5.target=char\ primerCaracter(java.lang.String)
+comment6.params=cadena
+comment6.target=char\ ultimoCaracter(java.lang.String)
+comment7.params=cadena
+comment7.target=boolean\ letraMedio(java.lang.String)
+numComments=8
