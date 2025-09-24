@@ -17,10 +17,12 @@ public class EjercicioFM
     {
         String menu="MENU\n1. Ingrese una Cadena\n2. Mostrar el Tamaño de la Cadena\n3. Mostrar el Primer Caracter.\n"+
         "4. Mostrar el Ultimo Caracter\n5. Mostrar el Caracter de Enmedio\n6. Mostrar la Cadena Invertida"+
-        "\n7.Mostrar Cadena\n0. Salir";
+        "\n7.Mostrar Cadena\n8.Pedir Caracter y Verificar si Existe\n0. Salir";
         
+        String cadena=ClaseFM.pedirCadena("Ingrese una Cadena");
+    
         int opcion=ClaseFM.pedirNumero(menu);//Pide un numero y lo valida
-        String cadena="";
+        
         
         while(opcion!=0)
         {
@@ -33,6 +35,18 @@ public class EjercicioFM
             }
             
             else if(opcion==7)ClaseFM.mostrarMensaje("La Cadena es: "+cadena);
+            
+            else if(opcion==8)
+            {
+                char c=ClaseFM.pedirChar("Ingrese el Caracter a Buscar");//Pedir un caracter y validarlo
+                boolean b=ClaseFM.buscarChar(cadena,c);//Retornar boolean si lo encuentra o no
+                //ClaseFM.mostrarMensaje("letra "+c+" "+b);
+                String result="";
+                if(b==true)result=""+c+" Se encuentra en la Cadena "+cadena;
+                else result=""+c+" NO Se encuentra en la Cadena "+cadena;
+                ClaseFM.mostrarMensaje(result);
+            }
+            
             
             opcion=opcion=ClaseFM.pedirNumero(menu);
         }

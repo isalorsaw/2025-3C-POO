@@ -2,6 +2,35 @@
 import javax.swing.JOptionPane;
 public class ClaseFM
 {
+    //Funcion: Retorna un boolean si encuentra o no un char. Recibe la cadena y un char
+    public static boolean buscarChar(String cadena, char letra)
+    {
+        for(int i=0;i<cadena.length();i++)
+        {
+            char le=cadena.charAt(i);
+            if(le==letra)return true;
+        }
+        return false;
+    }
+    //Funcion: Que pide un caracter, lo valida y lo retorna
+    public static char pedirChar(String msg)
+    {
+        char le=' ';
+        boolean seguir=true;
+        
+        do
+        {
+            String cadena=pedirCadena(msg);
+            if(cadena.length()==1)
+            {
+                seguir=false;
+                le=cadena.charAt(0);
+            }
+            else mostrarMensaje(cadena+" No es un caracter");
+        }while(seguir);//Lo mismo que seguir==true
+        
+        return le;
+    }
      //Metodo: Que recibe una cadena y lo muestra en pantalla
     public static void mostrarMensaje(String cadena)//Metodo
     {
