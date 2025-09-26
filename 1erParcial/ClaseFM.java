@@ -2,6 +2,71 @@
 import javax.swing.JOptionPane;
 public class ClaseFM
 {
+    //Funcion: Que reciba un rango y me retorna un numero aleatorio de ese rango
+    public static int generaAleatorio(int d, int h)
+    {
+        int ale=((int)(Math.random()*(h-d+1)+d));
+        return ale;
+    }
+    //Funcion: Recibe un arreglo y retorna la suma de todos los elementos
+    public static int suma(int a[])
+    {
+        int s=0;
+        int i=0;
+        while(i<a.length)
+        {
+            s=s+a[i];
+            i++;
+        }
+        return s;
+    }
+    //Funcion: Recibe un arreglo y un valor y cuanta cuantas veces esta en el arreglo
+    public static int contar(int a[], int v)
+    {
+        int cont=0;
+        for(int i=0;i<a.length;i++)
+        {
+            if(a[i]==v)cont=cont+1;//cont++;
+        }
+        return cont;
+    }
+    //Metodo: Recibe un arreglo y lo llena pidiendo al usuario
+    public static void llenarXUsuario(int a[])
+    {
+        for(int i=0;i<a.length;i++)
+        {
+            a[i]=pedirNumero("Ingrese un Numero");
+        }
+    }
+    //Metodo: Recibe un arreglo, un desde y un hasta y me llena de numeros aleatorios de ese rango
+    public static void llenarAleatorio(int a[], int d, int h)
+    {
+        for(int i=0;i<a.length;i++)
+        {
+            a[i]=generaAleatorio(d,h);
+        }
+    }
+    //Metodo: Recibe un arreglo y muestra sus elementos en un mensaje
+    public static void imprimir(int a[])
+    {
+        String cadena="Elementos del Arreglo\n";
+        for(int i=0;i<a.length;i++)
+        {
+            //cadena+=a[i]+" ";
+            cadena+=a[i]+"\n";
+        }
+        mostrarMensaje(cadena);
+    }
+    //Funcion: Recibe un arreglo y retorna todos los elementos en una Cadena
+    public static String print(int a[])
+    {
+        String cadena="";
+        for(int i=0;i<a.length;i++)
+        {
+            cadena+=a[i]+" ";
+        }
+        return cadena;
+    }
     //Funcion: Retorna un boolean si encuentra o no un char. Recibe la cadena y un char
     public static boolean buscarChar(String cadena, char letra)
     {
