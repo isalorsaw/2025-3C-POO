@@ -57,6 +57,16 @@ public class ClaseFM
         }
         mostrarMensaje(cadena);
     }
+    public static void invertir(int a[])
+    {
+        String cadena="Elementos del Arreglo\n";
+        for(int i=a.length-1;i>=0;i++)
+        {
+            //cadena+=a[i]+" ";
+            cadena+=a[i]+"\n";
+        }
+        mostrarMensaje(cadena);
+    }
     //Funcion: Recibe un arreglo y retorna todos los elementos en una Cadena
     public static String print(int a[])
     {

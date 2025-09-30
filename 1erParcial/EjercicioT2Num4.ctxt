@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=EjercicioT2Num4
+comment0.text=\r\n\ \ \ Leer\ y\ validar\ un\ rango\ de\ n\u00FAmeros,\ Desde\ y\ Hasta\ y\ que\ muestre\ cuantos\ y\ cu\u00E1les\ son\ \r\n\ \ \ m\u00FAltiplos\ de\ 2\ hay\ en\ ese\ rango\r\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+numComments=2
