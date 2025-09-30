@@ -50,6 +50,9 @@ public class MenuArreglo
                     ClaseFM.mostrarMensaje("Adios!");
                 break;
                 
+                default:
+                    ClaseFM.mostrarMensaje("Opcion NO Valida");
+                break;
             }
         }while(opcion!=0);
         
