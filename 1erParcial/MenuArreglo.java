@@ -3,7 +3,8 @@ public class MenuArreglo
     public static void main(String args[])
     {
         String menu="Menu\n1.Llenar por Usuario\n2.Llenar Aleatorio\n3.Sumar todos los elementos"+
-        "\n4.Mostrar Arreglo Invertido\n5.Contar cuantas veces esta un numero\n9.Imprimir\n0.Salir";
+        "\n4.Mostrar Arreglo Invertido\n5.Contar cuantas veces esta un numero\n9.Imprimir\n"+
+        "10.Reemplazar\n11.Reemplazar Valores con otro numero\n0.Salir";
         
         int opcion=0;
         
@@ -44,6 +45,19 @@ public class MenuArreglo
                 
                 case 9:
                     ClaseFM.imprimir(a);
+                break;
+                
+                case 10:
+                    int p1=ClaseFM.pedirPosicion(a.length);
+                    int p2=ClaseFM.pedirPosicion(a.length);
+                    ClaseFM.mostrarMensaje("Vamos a reemplazar los valores de la Posicion "+p1+" con "+p2);
+                    ClaseFM.reemplazar(a,p1,p2);//Intercambiar valores de una posicion
+                break;
+                
+                case 11:
+                    int bus=ClaseFM.pedirNumero("Ingrese un Valor a Buscar");
+                    int rem=ClaseFM.pedirNumero("Ingrese un Valor para Reemplazar");
+                    ClaseFM.reemplazarV(a,bus,rem);//Reemplazar valores de una posicion
                 break;
                 
                 case 0:

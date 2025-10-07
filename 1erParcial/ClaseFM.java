@@ -2,6 +2,37 @@
 import javax.swing.JOptionPane;
 public class ClaseFM
 {
+    //Metodo: Reemplazar dos valores de dos posiciones
+    public static void reemplazar(int a[], int p1, int p2)
+    {
+         int i1=p1-1;
+         int i2=p2-1;
+         
+         int temp=a[i2];//3
+         a[i2]=a[i1];
+         a[i1]=temp;
+    }
+    //Metodo: Buscar valor y reemplazar por otro
+    public static void reemplazarV(int a[], int v, int reem)
+    {
+        for(int i=0;i<a.length;i++)
+        {
+            if(a[i]==v)a[i]=reem;
+        }
+    }
+    //Funcion: Pedir una posicion del arreglo y validarla
+    public static int pedirPosicion(int lim)
+    {
+        boolean seguir=true;
+        int pos=0;
+        
+        do
+        {
+            pos=pedirNumero("Ingrese una Posicion Valida del Arreglo Debe de ser entre 1 y "+lim);
+            if(pos>=1&&pos<=lim)seguir=false;
+        }while(seguir==true);
+        return pos;
+    }
     //Funcion: Que reciba un rango y me retorna un numero aleatorio de ese rango
     public static int generaAleatorio(int d, int h)
     {
@@ -53,7 +84,7 @@ public class ClaseFM
         for(int i=0;i<a.length;i++)
         {
             //cadena+=a[i]+" ";
-            cadena+=a[i]+"\n";
+            cadena+=a[i]+" ";
         }
         mostrarMensaje(cadena);
     }
