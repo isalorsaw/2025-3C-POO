@@ -11,6 +11,20 @@ public class PruebaTrabajador
         //Trabajador tra=new Trabajador(nombre,direccion,puesto,fechanac,cedula);
         Trabajador tra=new Trabajador(cedula,nombre);
         
+        //ClaseFM.mostrarMensaje(tra.toString());
+        
+        ClaseFM.mostrarMensaje(tra.getNombre());
+        
+        //tra.setNombre("ISAIAS");
+        String n=ClaseFM.pedirCadena("Ingrese un Nuevo nombre para cambiar "+tra.getNombre());
+        tra.setNombre(n);
+        
+        String d=ClaseFM.pedirCadena("Ahora si ingresamos la direccion");
+        tra.setDireccion(d);
+        
         ClaseFM.mostrarMensaje(tra.toString());
+        
+        
+        
     }
 }

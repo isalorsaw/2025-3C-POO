@@ -43,6 +43,25 @@ public class Trabajador
         direccion=puesto=fechanac="";
     }*/
     
+    //Funcion
+    public String getNombre()
+    {
+        return nombre;
+    }
+    //Metodo
+    public void setNombre(String nombre)
+    {
+        this.nombre=nombre;
+    }
+    public String getDireccion()
+    {
+        return direccion;
+    }
+    public void setDireccion(String direccion)
+    {
+        this.direccion=direccion;
+    }
+    
     //Funcion toString me muestra la informacion de los atributos
     public String toString()
     {

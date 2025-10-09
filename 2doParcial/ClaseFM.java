@@ -163,6 +163,26 @@ public class ClaseFM
         }while(seguir==true);
         return num;
     }
+     //Funcion: Pide un Decimal, lo valida y lo retorna al final
+    public static double pedirDecimal(String msg)
+    {
+        double num=0;
+        boolean seguir=true;
+        do
+        {
+            try
+            {
+                String entrada=JOptionPane.showInputDialog(msg);
+                num=Double.parseDouble(entrada);
+                seguir=false;
+            }catch(Exception exp)
+            {
+                mostrarMensaje("Hubo un Error al Ingresar");
+            }
+            
+        }while(seguir==true);
+        return num;
+    }
     //Funcion: Que pida una cadena y la retorna
     public static String pedirCadena(String msg)
     {

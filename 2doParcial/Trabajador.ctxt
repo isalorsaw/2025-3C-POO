@@ -7,6 +7,14 @@ comment2.target=Trabajador(java.lang.String,\ java.lang.String,\ java.lang.Strin
 comment3.params=cedula\ nombre
 comment3.target=Trabajador(java.lang.String,\ java.lang.String)
 comment4.params=
-comment4.target=java.lang.String\ toString()
+comment4.target=java.lang.String\ getNombre()
 comment4.text=public\ Trabajador(String\ c,\ String\ n)\r\n\ \ \ \ {\r\n\ \ \ \ \ \ \ \ cedula\=c;\r\n\ \ \ \ \ \ \ \ nombre\=n;\r\n\ \ \ \ \ \ \ \ direccion\=puesto\=fechanac\="";\r\n}
-numComments=5
+comment5.params=nombre
+comment5.target=void\ setNombre(java.lang.String)
+comment6.params=
+comment6.target=java.lang.String\ getDireccion()
+comment7.params=direccion
+comment7.target=void\ setDireccion(java.lang.String)
+comment8.params=
+comment8.target=java.lang.String\ toString()
+numComments=9
