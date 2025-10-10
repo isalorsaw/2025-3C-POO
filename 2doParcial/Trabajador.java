@@ -61,11 +61,18 @@ public class Trabajador
     {
         this.direccion=direccion;
     }
-    
     //Funcion toString me muestra la informacion de los atributos
     public String toString()
     {
         return "Nombre "+nombre+"\nDireccion"+direccion+"\nPuesto"+puesto+
         "\nFechaNac"+fechanac+"\nCedula"+cedula;
-    }    
+    } 
+    public boolean equals(String cedula)
+    {
+        boolean b=this.cedula.equals(cedula);
+        
+        //Comparar un String con Otro se utilizar equals. str1.equals(str2)
+        //Comparar un entero con otro se compara como = ejemplo num1==num2
+        return b;
+    }
 }

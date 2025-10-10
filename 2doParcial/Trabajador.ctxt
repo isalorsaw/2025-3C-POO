@@ -17,4 +17,6 @@ comment7.params=direccion
 comment7.target=void\ setDireccion(java.lang.String)
 comment8.params=
 comment8.target=java.lang.String\ toString()
-numComments=9
+comment9.params=cedula
+comment9.target=boolean\ equals(java.lang.String)
+numComments=10
