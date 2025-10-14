@@ -62,7 +62,7 @@ public class Trabajador
         this.direccion=direccion;
     }
     //Funcion toString me muestra la informacion de los atributos
-    public String toString()
+    public String toString()//datos-informacion
     {
         return "Nombre "+nombre+"\nDireccion"+direccion+"\nPuesto"+puesto+
         "\nFechaNac"+fechanac+"\nCedula"+cedula;
