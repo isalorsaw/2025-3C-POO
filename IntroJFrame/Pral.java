@@ -9,7 +9,8 @@ public class Pral extends JFrame
         e=new Escenario();
         add(e);
         
-        setSize(1200,800);//Pixeles
+        //setSize(e.getWidth()+100,e.getHeight()+100);//Pixeles Un espacio a la derecha del fondo
+        setSize(e.getWidth(),e.getHeight()+100);//Pixeles
         setLocationRelativeTo(null);//Centrar el Frame
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setVisible(true);//Mostrar el Formulario
