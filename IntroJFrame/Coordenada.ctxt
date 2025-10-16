@@ -4,4 +4,6 @@ comment1.params=x\ y
 comment1.target=Coordenada(int,\ int)
 comment2.params=x\ y\ ruta
 comment2.target=Coordenada(int,\ int,\ java.lang.String)
-numComments=3
+comment3.params=
+comment3.target=java.lang.String\ toString()
+numComments=4

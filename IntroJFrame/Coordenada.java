@@ -17,7 +17,7 @@ public class Coordenada
     }
     Coordenada(int x, int y,String ruta)
     {
-        this.x=this.x;
+        this.x=x;
         this.y=y;
         this.ruta=ruta;
         
@@ -25,5 +25,9 @@ public class Coordenada
         this.imagen=icono.getImage();//Dibujarla en Graphics
         this.ancho=icono.getIconWidth();//Asignar la anchura de la imagen
         this.alto=icono.getIconHeight();//Asigna la altura de la imagen
+    }
+    public String toString()
+    {
+        return "X "+x+" Y "+y;
     }
 }

@@ -1,5 +1,0 @@
-#BlueJ class context
-comment0.target=Yate
-comment1.params=x\ y\ ruta
-comment1.target=Yate(int,\ int,\ java.lang.String)
-numComments=2

@@ -4,4 +4,6 @@ comment1.params=x\ y\ ruta
 comment1.target=Fondo(int,\ int,\ java.lang.String)
 comment2.params=g
 comment2.target=void\ dibuja(java.awt.Graphics)
-numComments=3
+comment3.params=
+comment3.target=java.lang.String\ toString()
+numComments=4
