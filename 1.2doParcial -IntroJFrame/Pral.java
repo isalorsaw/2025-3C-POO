@@ -7,6 +7,7 @@ public class Pral extends JFrame
         super("Titulo del Proyecto");
         
         e=new Escenario();
+        e.setFocusable(true);//Prioriza el Escenario.
         add(e);
         
         //setSize(e.getWidth()+100,e.getHeight()+100);//Pixeles Un espacio a la derecha del fondo

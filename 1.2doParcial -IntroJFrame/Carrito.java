@@ -9,13 +9,22 @@ public class Carrito extends Coordenada
     {
         g.drawImage(imagen,x,y,null);
     }
-    public void setImagen(String ruta)
+    /*public void setImagen(String ruta)
     {
         
-    }
+    }*/
     public void mover(char dir)//u=arriba d=abajo l=izq r=derecha
     {
-        
+        if(dir=='r')//right derecha
+        {
+             x+=5;
+             setImagen("imagenes/carrito_der.png");
+        }
+        else if(dir=='l')//left izq
+        {
+            x-=5;
+            setImagen("imagenes/carrito_izq.png");
+        }
     }
     public String toString()
     {

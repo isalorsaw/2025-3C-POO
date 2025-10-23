@@ -5,8 +5,10 @@ import java.awt.Color;
 import java.awt.Font;//Fuente o Tipo de Letra
 import java.awt.event.MouseListener;
 import java.awt.event.MouseEvent;
+import java.awt.event.KeyListener;
+import java.awt.event.KeyEvent;
 import java.util.ArrayList;
-public class Escenario extends JPanel implements MouseListener //implementar los eventos del mouse
+public class Escenario extends JPanel implements MouseListener,KeyListener //implementar los eventos del mouse
 {
     Fondo f;
     Carrito c;
@@ -23,11 +25,29 @@ public class Escenario extends JPanel implements MouseListener //implementar los
         //JOptionPane.showMessageDialog(null,"Carrito en X "+c.x+" Y "+c.y);
         //y=new Yate();
         //setBackground(Color.YELLOW);
-        
+        //this.setFocusable(true);//Vuelve prioridad el Panel en el JFrame
         //Agregando la accion del Mouse
         this.addMouseListener(this);
         
+        //Agregando la accion de las Teclas
+        this.addKeyListener(this);
+        
         setSize(f.ancho,f.alto);
+    }
+    public void keyTyped(KeyEvent evt){}
+    public void keyReleased(KeyEvent evt){}
+    public void keyPressed(KeyEvent evt)
+    {
+        int code=evt.getKeyCode();
+        System.out.println("Codigo de la Tecla "+code);
+        
+        //u=arriba d=abajo l=izq r=derecha
+        if(code==39)//derecha
+        c.mover('r');
+        
+        if(code==37)c.mover('l');
+        repaint();
+        
     }
     public void mouseClicked(MouseEvent evt){}
     public void mousePressed(MouseEvent evt)
