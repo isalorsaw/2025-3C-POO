@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=Escenario
+comment1.params=
+comment1.target=Escenario()
+comment10.params=g
+comment10.target=void\ paint(java.awt.Graphics)
+comment2.params=evt
+comment2.target=void\ mouseClicked(java.awt.event.MouseEvent)
+comment3.params=evt
+comment3.target=void\ mousePressed(java.awt.event.MouseEvent)
+comment4.params=evt
+comment4.target=void\ mouseReleased(java.awt.event.MouseEvent)
+comment5.params=evt
+comment5.target=void\ mouseEntered(java.awt.event.MouseEvent)
+comment6.params=evt
+comment6.target=void\ mouseExited(java.awt.event.MouseEvent)
+comment7.params=ruta
+comment7.target=void\ setCarrito(java.lang.String)
+comment8.params=
+comment8.target=java.lang.String\ showGota()
+comment9.params=g
+comment9.target=void\ dibujarGotas(java.awt.Graphics)
+numComments=11
