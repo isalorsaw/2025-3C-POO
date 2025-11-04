@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=Carrito
+comment1.params=x\ y\ ruta
+comment1.target=Carrito(int,\ int,\ java.lang.String)
+comment2.params=g
+comment2.target=void\ dibuja(java.awt.Graphics)
+comment3.params=dir
+comment3.target=void\ mover(char)
+comment3.text=public\ void\ setImagen(String\ ruta)\r\n\ \ \ \ {\r\n\ \ \ \ \ \ \ \ \r\n}
+comment4.params=
+comment4.target=java.lang.String\ toString()
+comment5.params=otro
+comment5.target=boolean\ choque(java.awt.Rectangle)
+numComments=6
