@@ -31,6 +31,12 @@ public class Carrito extends Coordenada
         //Muy Importante al mover debo de actualizar el rectangle
         setRectangle();
     }
+    public boolean salida(int limiteX)
+    {
+        if(x<0)return true;
+        else if(x>limiteX)return true;
+        else return false;
+    }
     public String toString()
     {
         return super.toString();

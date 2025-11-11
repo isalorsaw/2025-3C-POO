@@ -6,7 +6,7 @@ public class Pral extends JFrame
     {
         super("Titulo del Proyecto");
         
-        e=new Escenario();
+        e=new Escenario(0);
         e.setFocusable(true);//Prioriza el Escenario.
         add(e);
         

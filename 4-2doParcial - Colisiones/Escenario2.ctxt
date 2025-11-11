@@ -1,7 +1,7 @@
 #BlueJ class context
-comment0.target=Escenario
+comment0.target=Escenario2
 comment1.params=nivel\ form
-comment1.target=Escenario(int,\ javax.swing.JFrame)
+comment1.target=Escenario2(int,\ javax.swing.JFrame)
 comment10.params=evt
 comment10.target=void\ mouseEntered(java.awt.event.MouseEvent)
 comment11.params=evt

@@ -9,16 +9,16 @@ import java.awt.event.MouseEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
-public class Escenario extends JPanel implements MouseListener,KeyListener //implementar los eventos del mouse
+public class Escenario3 extends JPanel implements MouseListener,KeyListener //implementar los eventos del mouse
 {
     int nivelact;
     Fondo f;
     Carrito c;
     Gota got;
     Piedra pie;
-    JFrame formPral;
     ArrayList<Gota> gots=new ArrayList<Gota>();
-    public Escenario(int nivel,JFrame form)
+    JFrame formPral;
+    public Escenario3(int nivel,JFrame form)
     {
         formPral=form;
         nivelact=nivel;
@@ -59,12 +59,13 @@ public class Escenario extends JPanel implements MouseListener,KeyListener //imp
         
         //if(c.choque(pie.getRectangle()))System.out.println("Se detecto un CHoque");
         
-        detectarChoqueGotCar();
         if(c.salida(f.ancho))
         {
             formPral.dispose();
-            new PralEsc(2);
-        }//laseFM.mostrarMensaje("Salio del FOndo");
+            new PralEsc(1);
+        }
+        
+        detectarChoqueGotCar();
         repaint();
         
     }
@@ -149,7 +150,7 @@ public class Escenario extends JPanel implements MouseListener,KeyListener //imp
         
         f.dibuja(g);
         c.dibuja(g);
-        pie.dibuja(g);
+        //pie.dibuja(g);
         if(got!=null)got.dibuja(g);
         dibujarGotas(g);
     }
