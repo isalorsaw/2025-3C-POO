@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Avion
+comment1.params=x\ y\ ruta
+comment1.target=Avion(int,\ int,\ java.lang.String)
+comment2.params=g
+comment2.target=void\ dibuja(java.awt.Graphics)
+comment3.params=
+comment3.target=java.lang.String\ toString()
+comment4.params=dir
+comment4.target=void\ mover(char)
+numComments=5
