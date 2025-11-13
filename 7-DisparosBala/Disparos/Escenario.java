@@ -12,6 +12,7 @@ import javax.swing.Timer;//Libreria para Utilizar el Timer
 //Librerias Action Listener para el Timer
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.io.File;
 public class Escenario extends JPanel implements MouseListener,KeyListener,ActionListener //implementar los eventos del mouse
 {
     Fondo f;
@@ -20,8 +21,8 @@ public class Escenario extends JPanel implements MouseListener,KeyListener,Actio
     //Gota got;
     ArrayList<Misil> misils=new ArrayList<Misil>();
     ArrayList<Enemigo> enemigos=new ArrayList<Enemigo>();
-    Timer t;//Variable de tipo timer o cronometro
-    Timer t2;
+    Timer t;//Timer para Mover Misiles
+    Timer t2;//Timer para Mover Enemigos
     public Escenario()
     {
         //f=new Fondo(0,0,"imagenes/fondo.png");
@@ -54,14 +55,49 @@ public class Escenario extends JPanel implements MouseListener,KeyListener,Actio
         if(evt.getSource()==t)
         {
             movMisiles();
-            repaint();
+            //repaint();
         }
         if(evt.getSource()==t2)
         {
             movEnemigos();
-            repaint();
+            //repaint();
+        } 
+        detecChqMisilEnem();
+        repaint();
+    }
+    public void detecChqMisilEnem()
+    {
+        for(int i=0;i<misils.size();i++)
+        {
+            Misil m=misils.get(i);
+            if(chqEneMis(m)==true)
+            {
+                //System.out.println("Choque "+i);
+                m.frenar();
+                playDisparo();
+            }            
         }
+    }
+    public void playDisparo()
+    {
+        File file=new File("disparo.mp3");
+        String ruta=file.getAbsolutePath();
         
+        MP3Player mp3Player = new MP3Player(ruta);//Inicializamos MP3Player
+        mp3Player.play();//Reproducimos
+    }
+    private boolean chqEneMis(Misil m)
+    {
+        for(int j=0;j<enemigos.size();j++)
+        {
+            Enemigo en=enemigos.get(j);
+            if(en.choque(m.rec))
+            {//Si enemigo choca con misil
+                en.frenar();
+                return true;
+            }
+        }
+        return false;
     }
     public void inicializarEnemigos()
     {
@@ -94,7 +130,7 @@ public class Escenario extends JPanel implements MouseListener,KeyListener,Actio
     public void keyPressed(KeyEvent evt)
     {
         int code=evt.getKeyCode();
-        System.out.println("Codigo de la Tecla "+code);
+        //System.out.println("Codigo de la Tecla "+code);
         
         
         //38 arriba 40 abajo 39 avanzar der 37 izq 32 spacebar
@@ -137,7 +173,7 @@ public class Escenario extends JPanel implements MouseListener,KeyListener,Actio
     {
         int x=evt.getX();
         int y=evt.getY();
-        System.out.println("Hice Click en Coordenada ("+x+" "+y+")"); 
+        //System.out.println("Hice Click en Coordenada ("+x+" "+y+")"); 
         //got=new Gota(x,y,"imagenes/gota.png",5);
         //gots.add(got);
         //got=new Gota(x,y,"imagenes/explosion.gif");pregunta de omar
